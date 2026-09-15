@@ -1,11 +1,11 @@
-public class sala {
+public class Sala {
 
     private String codigo;
     private int capacidade;
     private String responsavel;
     private boolean disponivel;
 
-    public sala(String responsavel, boolean disponivel){
+    public Sala(String responsavel, boolean disponivel){
         this.responsavel = responsavel;
         this.disponivel = true;
         this.disponivel = disponivel;
