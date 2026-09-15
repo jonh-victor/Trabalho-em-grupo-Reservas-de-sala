@@ -12,7 +12,15 @@ public class sala {
         this.responsavel = responsavel;
 
     }
-
+    public void reservar(String responsavel){
+        if(disponivel == true){
+            disponivel = false;
+            this.responsavel = responsavel;
+            System.out.println("Sala reservada com sucesso!");
+        }else{
+            System.out.println("Sala indisponível para reserva.");
+        }
+    }
 
 
 }
