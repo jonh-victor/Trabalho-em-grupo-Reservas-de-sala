@@ -5,12 +5,9 @@ public class Sala {
     private String responsavel;
     private boolean disponivel;
 
-    public Sala(String responsavel, boolean disponivel){
+    public Sala(String responsavel){
         this.responsavel = responsavel;
         this.disponivel = true;
-        this.disponivel = disponivel;
-        this.responsavel = responsavel;
-
     }
     public void reservar(String responsavel){
         if(disponivel == true){
