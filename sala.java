@@ -5,8 +5,8 @@ public class Sala {
     private String responsavel;
     private boolean disponivel;
 
-    public Sala(String responsavel){
-        this.responsavel = responsavel;
+    public Sala(){
+        this.responsavel = "Nenhum";
         this.disponivel = true;
     }
     public void reservar(String responsavel){
