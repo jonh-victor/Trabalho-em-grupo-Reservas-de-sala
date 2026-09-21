@@ -1,13 +1,16 @@
 public class Sala {
 
+
     private String codigo;
     private int capacidade;
     private String responsavel;
     private boolean disponivel;
+    private String status;
+
 
     //O professor nos pediu explicitamente que o responsável fosse nenhum no exercício. 
     //Modifiquei o contrututor para inicializar apenas o código da sala e sua capacidade.
-    public Sala(String codigo, int capacidade){
+    public Sala(String codigo, int capacidade){ 
         this.capacidade=capacidade;
         this.codigo=codigo;
         this.responsavel = "Nenhum";
@@ -24,7 +27,10 @@ public class Sala {
     }
     //Deixa a sala sem um responsável
     public void liberar(String responsavel){
-        this.responsavel="Nenhum";
+        if(disponivel == false){
+            this.responsavel="Nenhum";
+            disponivel = true;
+        }
     }
 
     //getters
@@ -37,18 +43,20 @@ public class Sala {
     public String getResponsavel(){
         return this.responsavel;
     }
-    public void getDisponibilidade(){
-        sucesso=this.disponivel;
-        if(sucesso){
-            System.out.println("Disponível");
+    public String getDisponibilidade(){
+
+        if(disponivel == true){
+  
+            status = "Disponivel";
         }else{
-            System.out.println("Indisponível");
+            status = "Indisponivel";
         }
+        return status;
     }
     //exibe getters essenciais para teste
     public void exibirDados(){
-        System.out.println(getCodigo);
-        System.out.println(getDisponibilidade);
+        System.out.println(getCodigo());
+        System.out.println(getDisponibilidade());
 
     }
 
